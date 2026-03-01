@@ -89,13 +89,51 @@ Rules:
 
 ---
 
-## API Contract
+## API
+
+### Hosted Endpoint
+
+The service is deployed and publicly accessible.
+
+**POST** `/identify`
+
+**Base URL:**
+
+```
+https://bitespeed-identity-ma29.onrender.com
+```
+
+> Note: Accessing the base URL (`/`) or opening `/identify` in a browser will show a Whitelabel Error Page. This is expected behavior because the endpoint only accepts HTTP POST requests with a JSON body.
+
+### Request
+
+```json
+{
+  "email": "test@bitespeed.com",
+  "phoneNumber": "9999999999"
+}
+```
+
+### Response
+
+````json
+{
+  "contact": {
+    "primaryContactId": 1,
+    "emails": ["test@bitespeed.com"],
+    "phoneNumbers": ["9999999999"],
+    "secondaryContactIds": []
+  }
+}
+``` Contract
 
 ### Endpoint
 
-```
+````
+
 POST /identify
-```
+
+````
 
 ### Request Body
 
@@ -104,7 +142,7 @@ POST /identify
   "email": "test@bitespeed.com",
   "phoneNumber": "9999999999"
 }
-```
+````
 
 Either field may be `null`, but **at least one must be present**.
 
