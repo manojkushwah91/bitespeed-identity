@@ -20,4 +20,9 @@ public class IdentityController {
             return ResponseEntity.badRequest().build();
         }
     }
+
+    @GetMapping("/")
+    public String health() {
+    return "Bitespeed Identity Service is running";
+}
 }
