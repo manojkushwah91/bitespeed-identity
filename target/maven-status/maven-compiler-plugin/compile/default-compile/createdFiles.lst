@@ -1,0 +1,9 @@
+com\bitespeed\identity\IdentityApplication.class
+com\bitespeed\identity\IdentifyRequest.class
+com\bitespeed\identity\Contact.class
+com\bitespeed\identity\IdentifyResponse$ContactPayload.class
+com\bitespeed\identity\IdentityController.class
+com\bitespeed\identity\IdentifyResponse.class
+com\bitespeed\identity\ContactRepository.class
+com\bitespeed\identity\Contact$LinkPrecedence.class
+com\bitespeed\identity\IdentityService.class
